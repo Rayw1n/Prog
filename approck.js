@@ -17,38 +17,38 @@ function generateComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3) + 1 // or you can use possibleChoices.length
 
     if (randomNumber === 1) {
-        computerChoice = 'StenJävel'
+        computerChoice = 'Rock'
     }
     if (randomNumber === 2) {
-        computerChoice = 'SaxJävel'
+        computerChoice = 'Scissor'
     }
     if (randomNumber === 3) {
-        computerChoice = 'Påsjävel'
+        computerChoice = 'Paper'
     }
     computerChoiceDisplay.innerHTML = computerChoice
 }
 
 function getResult() {
     if (computerChoice === userChoice) {
-        result = 'Ni förlorade tillsammans'
+        result = 'Its a Draw!'
     }
-    if (computerChoice === 'StenJävel' && userChoice === "Påsjävel") {
-        result = 'Tur, Du vann'
+    if (computerChoice === 'Rock' && userChoice === "Paper") {
+        result = 'You Win!'
     }
-    if (computerChoice === 'StenJävel' && userChoice === "SaxJävel") {
-        result = 'Din Idiot!'
+    if (computerChoice === 'Rock' && userChoice === "Scissor") {
+        result = 'You Lose!'
     }
-    if (computerChoice === 'Påsjävel' && userChoice === "SaxJävel") {
-        result = 'Tur, Du vann'
+    if (computerChoice === 'Paper' && userChoice === "Scissor") {
+        result = 'You Win!'
     } 
-    if (computerChoice === 'Påsjävel' && userChoice === "StenJävel") {
-        result = 'Din Idiot!'
+    if (computerChoice === 'Paper' && userChoice === "Rock") {
+        result = 'You Lose!'
     } 
-        if (computerChoice === 'SaxJävel' && userChoice === "StenJävel") {
-        result = 'Tur, Du vann'
+        if (computerChoice === 'Scissor' && userChoice === "Rock") {
+        result = 'You Win!'
     }
-        if (computerChoice === 'SaxJävel' && userChoice === "Påsjävel") {
-        result = 'Din Idiot!'
+        if (computerChoice === 'Scissor' && userChoice === "Paper") {
+        result = 'You Lose!'
         }
     resultDisplay.innerHTML = result
 }
