@@ -178,6 +178,14 @@ public class BlackJack {
             }
         });
 
+        restartButton.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+               startGame();
+               hitButton.setEnabled(true);
+               stayButton.setEnabled(true);
+               gamepaPanel.repaint();
+            }
+        });
          gamepaPanel.repaint();
     }
 
@@ -189,7 +197,7 @@ public class BlackJack {
         //dealer
         dealerHand = new ArrayList<Card>();
         dealerSum = 0;
-        dealerAceCount = 0;
+        dealerAceCount = 0; 
 
         hiddenCard = deck.remove(deck.size()-1); //remove card at last index
         dealerSum += hiddenCard.getValue();
